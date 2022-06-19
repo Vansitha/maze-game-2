@@ -8,7 +8,7 @@
 # How to run program
 - Step1: Run Makefile by typing ‘make’ in terminal (cd into the program directory first)
 Make file will create an executable called maze
-- Step3: Provide the name of the text file containing the metadata as command line argument eg: ./maze map.txt
+- Step2: Provide the name of the text file containing the metadata as command line argument eg: ./maze map.txt
 Play Game!
 
 NOTE: Running "make DEBUG=1" will enable debug stats while playing the game. This mode is used fo debugging and testing.
