@@ -1,6 +1,6 @@
 # New features
 - Players can now undo their moves to get out of sticky situations.
-- Added a non player character (snake) which tries to intercept the player before reaching the goal.
+- Added a snake NPC which tries to intercept the player before reaching the goal.
 
 # Deprecated features
 - Ability to set map visibility.
