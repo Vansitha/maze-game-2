@@ -128,16 +128,17 @@ int main(int argc, char *argv[])
 					if (ll->head != NULL)
 					{
 						undoData = removeFirst(ll);
-						convertData(undoData, currPlayerPosR, currPlayerPosC, currSnakePosR, currSnakePosC, playerDir, userInput); /* convert void data to int data */
-						revertMap(map, mapRow, mapCol, currPlayerPosR, currPlayerPosC, currSnakePosR, currSnakePosC, playerDir);   /* updates the revert changes in the map */
+						
+						convertData(undoData, currPlayerPosR, currPlayerPosC, currSnakePosR, currSnakePosC, playerDir, userInput); 
+						revertMap(map, mapRow, mapCol, currPlayerPosR, currPlayerPosC, currSnakePosR, currSnakePosC, playerDir);
 						free(undoData);
 						undoData = NULL;
 					}
 					if (ll->head != NULL)
 					{
 						undoData = removeFirst(ll);
-						convertData(undoData, currPlayerPosR, currPlayerPosC, currSnakePosR, currSnakePosC, playerDir, userInput); /* convert void data to int data */
-						revertMap(map, mapRow, mapCol, currPlayerPosR, currPlayerPosC, currSnakePosR, currSnakePosC, playerDir);   /* updates the revert changes in the map */
+						convertData(undoData, currPlayerPosR, currPlayerPosC, currSnakePosR, currSnakePosC, playerDir, userInput);
+						revertMap(map, mapRow, mapCol, currPlayerPosR, currPlayerPosC, currSnakePosR, currSnakePosC, playerDir);
 						free(undoData);
 						undoData = NULL;
 					}
@@ -171,8 +172,8 @@ int main(int argc, char *argv[])
 				system("clear");
 				displayMap(map, mapRow, mapCol);
 
-/* For debugging/testing */
-#ifdef DEBUG
+				/* For debugging/testing */
+				#ifdef DEBUG
 				printf("\n===== Current Position Stats =====\n");
 				printf("PlayerPosR: %d | PlayerPosC: %d\n", *currPlayerPosR, *currPlayerPosC);
 				printf("Player: %c\n", map[*currPlayerPosR][*currPlayerPosC]);
@@ -183,8 +184,7 @@ int main(int argc, char *argv[])
 				printf("PlayerPosR: %d | PlayerPosC: %d\n", dataSet->playerPosR, dataSet->playerPosC);
 				printf("SnakePosR: %d | SnakePosC: %d\n", dataSet->snakePosR, dataSet->snakePosR);
 				printf("Player Character: %c\n", dataSet->charDirection);
-
-#endif
+				#endif
 			}
 			/* END OF GAME */
 			if (status == WON)
