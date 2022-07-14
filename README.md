@@ -12,3 +12,5 @@ Make file will create an executable called maze
 Play Game!
 
 NOTE: Running "make DEBUG=1" will enable debug stats while playing the game. This mode is used fo debugging and testing.
+
+v2.0
